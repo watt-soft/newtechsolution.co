@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Logo } from './atoms/Logo';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,9 +34,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'
+        }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -45,19 +45,14 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center space-x-3 cursor-pointer group"
           >
-            <motion.div
+            {/* <motion.div
               className="bg-[#F7F7F7] p-2 rounded-lg group-hover:bg-gradient-to-br group-hover:from-[#067C64] group-hover:to-[#05684F] transition-all duration-300"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
               <Sun className="w-8 h-8 text-[#067C64] group-hover:text-white transition-colors duration-300" />
-            </motion.div>
-            <div>
-              <h1 className="text-xl font-bold text-[#0F1724] leading-tight">
-                NEW TECH SOLUTION
-              </h1>
-              <p className="text-xs text-[#6B7280]">(PVT) LTD</p>
-            </div>
+            </motion.div> */}
+            <Logo size='lg' navbar={true} />
           </motion.div>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -135,8 +130,8 @@ const Header = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </nav>
-    </header>
+      </nav >
+    </header >
   );
 };
 
