@@ -16,7 +16,7 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
+    // { label: 'Home', href: '#home' },
     { label: 'Products', href: '#products' },
     { label: 'Services', href: '#services' },
     { label: 'Portfolio', href: '#portfolio' },
@@ -38,24 +38,32 @@ const Header = () => {
         }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex items-center space-x-3 cursor-pointer group"
+        <div className="flex items-center justify-between h-16">
+          <motion.button
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 * 0.05 }}
+            onClick={() => scrollToSection('#home')}
+            className="relative text-[#0F1724] hover:text-[#067C64] font-medium transition-colors duration-200 py-1"
           >
-            {/* <motion.div
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center space-x-3 cursor-pointer group"
+            >
+              {/* <motion.div
               className="bg-[#F7F7F7] p-2 rounded-lg group-hover:bg-gradient-to-br group-hover:from-[#067C64] group-hover:to-[#05684F] transition-all duration-300"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
               <Sun className="w-8 h-8 text-[#067C64] group-hover:text-white transition-colors duration-300" />
             </motion.div> */}
-            <Logo size='lg' navbar={true} />
-          </motion.div>
+              <Logo size='md' navbar={true} />
+            </motion.div>
+          </motion.button>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.label}
@@ -81,7 +89,7 @@ const Header = () => {
               whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(6, 124, 100, 0.2)' }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('#contact')}
-              className="bg-gradient-to-r from-[#FFB020] to-[#ff9800] hover:shadow-lg text-white px-6 py-2.5 rounded-lg font-medium transition-all duration-200"
+              className="bg-gradient-to-r from-[#FFB020] to-[#ff9800] hover:shadow-lg text-white px-5 py-2 rounded-lg font-medium transition-all duration-200"
             >
               Get a Quote
             </motion.button>

@@ -28,7 +28,7 @@ export const products: ProductItem[] = [
   {
     id: 'p3',
     productName: 'Solar Inverters & Batteries',
-    image: 'https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
     bullets: [
       'Premium hybrid and on-grid inverters from leading brands',
       'Lithium-ion and lead-acid battery storage solutions',
@@ -40,7 +40,7 @@ export const products: ProductItem[] = [
   {
     id: 'p4',
     productName: 'EV Charging Stations',
-    image: 'https://images.pexels.com/photos/7656750/pexels-photo-7656750.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
     bullets: [
       'DC fast charging stations up to 150kW',
       'Level 2 home chargers (7kW - 22kW)',

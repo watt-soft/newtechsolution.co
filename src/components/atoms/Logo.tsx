@@ -16,14 +16,14 @@ export const Logo: React.FC<LogoProps> = ({
 }) => {
     const { isDark } = useTheme();
     const sizes = {
-        sm: { icon: 20, text: 'text-lg' },
-        md: { icon: 30, text: 'text-xl' },
-        lg: { icon: 35, text: 'text-2xl' }
+        sm: { icon: 20, text: 'text-lg', navHeight: 'h-[24px] md:h-[28px]' },
+        md: { icon: 30, text: 'text-xl', navHeight: 'h-[28px] md:h-[32px]' },
+        lg: { icon: 35, text: 'text-2xl', navHeight: 'h-[30px] md:h-[38px]' }
     };
 
     // Responsive size for mobile in navbar
     const iconSize = navbar
-        ? 'h-[30px] md:h-[38px]'
+        ? sizes[size].navHeight
         : `h-[${sizes[size].icon}px]`;
 
     return (
