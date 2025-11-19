@@ -57,7 +57,7 @@ function App() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Premium solar energy products designed for efficiency and sustainability
+                Premium solar energy products designed for efficiency and sustainability with electricity saving
               </motion.p>
             </motion.div>
             <div className="space-y-8">

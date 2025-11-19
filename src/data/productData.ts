@@ -3,50 +3,96 @@ import { ProductItem } from '../types';
 export const products: ProductItem[] = [
   {
     id: 'p1',
-    productName: 'Residential Solar Panel Systems',
-    image: 'https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800',
+    productName: 'Solar Air Conditioner',
+    image: 'solar_ac.png',
     bullets: [
-      'High-efficiency monocrystalline and polycrystalline panels',
-      'Complete home solar solutions from 3kW to 15kW',
-      '25-year performance warranty on all panels',
-      'Smart monitoring systems for real-time energy tracking',
-      'Professional installation with grid-tie or off-grid options'
+      '  DC Solar Air Conditioner (100% Solar) — Runs directly on solar power from solar panels',
+      'Hybrid Air Conditioner — Uses both solar power and grid electricity. Auto switch  Prioritizes solar; switches to grid during low sunlight or night',
+      'Energy-efficient — Ideal for offices, schools, show rooms, hotels and educational institute',
     ]
   },
   {
     id: 'p2',
-    productName: 'Commercial Solar Solutions',
-    image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
+    productName: 'Solar Hot Water System',
+    image: 'solar_hot_water.jpeg',
     bullets: [
-      'Large-scale solar installations from 50kW to multi-megawatt systems',
-      'Customized energy solutions for factories, offices, and warehouses',
-      'Advanced energy storage systems for uninterrupted power',
-      'ROI-focused designs with rapid payback periods',
-      'Comprehensive maintenance and monitoring packages'
+      'Energy Savings — Uses free solar energy to reduce monthly bills',
+      'Long-Lasting — Minimal maintenance; 15-20+ year lifespan',
+      'Wide Use — Suitable for homes, hotels, hospitals, factories, and more',
+      'Eco-Friendly — Lowers carbon emissions and fossil-fuel dependence',
+      'Capacities — 100-300L for homes; 500-5000L+ for commercial use',
     ]
   },
   {
     id: 'p3',
-    productName: 'Solar Inverters & Batteries',
-    image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
+    productName: 'Solar Water Pump',
+    image: 'solar_water_pump.png',
     bullets: [
-      'Premium hybrid and on-grid inverters from leading brands',
-      'Lithium-ion and lead-acid battery storage solutions',
-      'Intelligent power management systems',
-      'Compatible with all major solar panel brands',
-      'Extended warranty and after-sales support'
+      'Efficient Performance — Ideal for small to medium water needs',
+      'Direct Solar Use — Runs from solar panels with a dedicated controller',
+      'Long Lifespan — Durable build with low maintenance',
+      'High Output — MPPT technology ensures strong flow even in low sunlight',
+      'Capacities — DC pumps from 0.5 HP to 3 HP',
     ]
   },
   {
     id: 'p4',
-    productName: 'EV Charging Stations',
-    image: 'https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800',
+    productName: 'Solar Outdoor LED Lights',
+    image: 'solar_outdoor_light.jpg',
     bullets: [
-      'DC fast charging stations up to 150kW',
-      'Level 2 home chargers (7kW - 22kW)',
-      'Smart charging with mobile app integration',
-      'Weather-resistant outdoor installations',
-      'Compatible with all major EV brands'
+      'Solar Lighting Types — All-in-one street lights, split-type street lights, garden/pathway lights, flood lights, and motion-sensor lights for security and outdoor illumination',
+      'Applications — Residential outdoors, gardens and pathways, parking lots, commercial areas, security perimeters, resorts, hotels, public parks, farms, and off-grid locations',
+      'Easy Installation, Low Maintenance, High Efficiency, Smart Features, Weather Resistant Designed with IP65/IP66, Eco-Friendly',
+    ]
+  },
+  {
+    id: 'p5',
+    productName: 'On-Grid Solar System',
+    image: 'ongrid_solar_system.jpg',
+    bullets: [
+      'Grid-Connected — Generates solar power and feeds excess energy to the utility grid while getting passive income',
+      'Cost-Effective — Zero monthly electricity bill',
+      'No Batteries Required — Lower installation cost and simple maintenance',
+      'Best For — Homes, offices, shops, apartments, and commercial buildings with stable grid supply',
+
+    ]
+  },
+  {
+    id: 'p6',
+    productName: 'Off-Grid Solar System',
+    image: 'offgrid_solar_system.png',
+    bullets: [
+      'Fully Independent — Operates without grid connection using solar + battery storage',
+      'Reliable Backup — 24/7 Uninterrupted stable power supply',
+      'Battery-Based — Stores excess solar energy for nighttime use',
+      'High Autonomy — Designed to run essential appliances even in low sunlight',
+      'Best For — Shops, Farms, rural homes, cabana, telecom towers sites',
+
+    ]
+  },
+  {
+    id: 'p7',
+    productName: 'Hybrid Solar System',
+    image: 'hybrid_solar_system.jpg',
+    bullets: [
+      'Earn high income during peak time selling',
+      'Dual Power Source — Uses solar energy, batteries, and grid power together',
+      'Uninterrupted Supply — Automatically switches during outages for seamless backup',
+      'Flexible Usage — Stores extra solar power for nighttime or peak- demand hours',
+      'Best For — Homes, offices, and businesses needing both backup and bill reduction',
+
+    ]
+  },
+  {
+    id: 'p8',
+    productName: 'EV Charging Points - Commercial / Home',
+    image: 'ev_charging_points.jpg',
+    bullets: [
+      'Fast & Reliable Charging — Supports standard and fast-charging options',
+      'Smart Control — App monitoring, usage tracking, and scheduling features',
+      'Safe & Durable — Built with protection against overloads, surges, and overheating',
+      'Easy Installation — Suitable for homes, apartments, offices, and commercial spaces',
+      'Supports All EVs — Compatible with major electric vehicle brands and models',
     ]
   }
 ];
