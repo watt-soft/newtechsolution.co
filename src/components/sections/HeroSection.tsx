@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-20 bg-gradient-to-br from-[#067C64] via-[#05684F] to-[#044839] overflow-hidden"
+      className="relative min-h-screen flex items-center pt-4 bg-gradient-to-br from-[#067C64] via-[#05684F] to-[#044839] overflow-hidden"
     >
       <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/371900/pexels-photo-371900.jpeg?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center opacity-10"></div>
 
@@ -108,7 +108,7 @@ const HeroSection = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div className="max-w-3xl">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -117,7 +117,7 @@ const HeroSection = () => {
             <p className="text-white/90 text-sm font-medium">
               Leading Solar Energy Provider in Sri Lanka
             </p>
-          </motion.div>
+          </motion.div> */}
 
           <motion.h1
             {...fadeInUp}
