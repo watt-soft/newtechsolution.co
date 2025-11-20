@@ -3,15 +3,8 @@ import { motion } from 'framer-motion';
 import { products } from '../../data/productData';
 import ProductsCard from '../ProductsCard';
 import { staggerContainer, staggerItem } from '../../utils/animationConfig';
-import { ProductCard_SM } from '../ProductCard_SM';
-import { ProductItem } from '../../types';
-import ProductsCardModal from '../modal/ProductsCardModal';
 
-const ProductSection = () => {
-
-
-
-
+const ProductSectionOLD = () => {
     return (
 
         <>
@@ -51,24 +44,15 @@ const ProductSection = () => {
                             Premium solar energy products designed for efficiency and sustainability with electricity saving
                         </motion.p>
                     </motion.div>
-                    <motion.div
-                        className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-                        initial="initial"
-                        whileInView="whileInView"
-                        viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-                        variants={staggerContainer}
-                    >
+                    <div className="space-y-8">
                         {products.map((product, index) => (
-                            // <ProductsCard key={product.id} product={product} index={index} />
-                            <ProductCard_SM key={product.id} product={product} />
+                            <ProductsCard key={product.id} product={product} index={index} />
                         ))}
-                    </motion.div>
+                    </div>
                 </div>
             </motion.section>
-
-
         </>
     )
 }
 
-export default ProductSection
+export default ProductSectionOLD
