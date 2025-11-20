@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem } from '../../utils/animationConfig';
 import ServiceCard from '../ServiceCard';
 import { services } from '../../data/serviceData';
+import ServiceCard_LG from '../ServiceCard_LG';
 
 export const ServiceSection = () => {
     return (
@@ -43,7 +44,12 @@ export const ServiceSection = () => {
                             Comprehensive solar energy services from installation to maintenance
                         </motion.p>
                     </motion.div>
-                    <motion.div
+                    <div className="space-y-8">
+                        {services.map((service, index) => (
+                            <ServiceCard_LG key={service.id} service={service} index={index} />
+                        ))}
+                    </div>
+                    {/* <motion.div
                         className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
                         initial="initial"
                         whileInView="whileInView"
@@ -53,7 +59,7 @@ export const ServiceSection = () => {
                         {services.map((service) => (
                             <ServiceCard key={service.id} service={service} />
                         ))}
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </motion.section>
         </>

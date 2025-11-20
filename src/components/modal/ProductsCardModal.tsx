@@ -34,7 +34,7 @@ const ProductsCardModal = ({ product, index, isOpen, onClose }: ModalProductsCar
                         {/* Close Button */}
                         <button
                             onClick={onClose}
-                            className="absolute top-3 right-3 p-2 bg-white/80 hover:bg-white rounded-full shadow-md"
+                            className="absolute top-3 right-3 p-2 bg-white/80 hover:bg-white rounded-full shadow-md z-50"
                         >
                             <X className="w-5 h-5 text-gray-800" />
                         </button>
