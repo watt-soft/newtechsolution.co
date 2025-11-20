@@ -16,7 +16,7 @@ import { PortfolioSection } from './components/sections/PortfolioSection';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white overflow-x-hidden">
         <Header />
         <HeroSection />
         {/* <StatCards /> */}
