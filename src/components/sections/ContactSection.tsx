@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../utils/animationConfig';
+import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../../utils/animationConfig';
 
-const Contact = () => {
+const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -218,4 +218,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;

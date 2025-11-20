@@ -1,8 +1,8 @@
 import { History, Target, Award, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../utils/animationConfig';
+import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../../utils/animationConfig';
 
-const About = () => {
+const AboutSection = () => {
   return (
     <motion.section
       id="about"
@@ -174,4 +174,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

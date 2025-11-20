@@ -1,8 +1,8 @@
 import { ArrowRight, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { fadeInUp, buttonHover } from '../utils/animationConfig';
+import { fadeInUp, buttonHover } from '../../utils/animationConfig';
 
-const Hero = () => {
+const HeroSection = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -198,4 +198,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
