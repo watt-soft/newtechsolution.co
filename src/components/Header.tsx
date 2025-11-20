@@ -59,7 +59,7 @@ const Header = () => {
             >
               <Sun className="w-8 h-8 text-[#067C64] group-hover:text-white transition-colors duration-300" />
             </motion.div> */}
-              <Logo size='md' navbar={true} />
+              <Logo size='md' className="drop-shadow-sm" navbar={true} />
             </motion.div>
           </motion.button>
 
