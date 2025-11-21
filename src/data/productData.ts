@@ -35,6 +35,16 @@ export const products: ProductItem[] = [
       'Capacities — DC pumps from 0.5 HP to 3 HP',
     ]
   },
+  {
+    id: 'p4',
+    productName: 'Solar Outdoor LED Lights',
+    image: 'solar_outdoor_light.jpg',
+    bullets: [
+      'Solar Lighting Types — All-in-one street lights, split-type street lights, garden/pathway lights, flood lights, and motion-sensor lights for security and outdoor illumination',
+      'Applications — Residential outdoors, gardens and pathways, parking lots, commercial areas, security perimeters, resorts, hotels, public parks, farms, and off-grid locations',
+      'Easy Installation, Low Maintenance, High Efficiency, Smart Features, Weather Resistant Designed with IP65/IP66, Eco-Friendly',
+    ]
+  },
 
   {
     id: 'p5',
@@ -49,28 +59,7 @@ export const products: ProductItem[] = [
     ]
   },
   {
-    id: 'p4',
-    productName: 'Solar Outdoor LED Lights',
-    image: 'solar_outdoor_light.jpg',
-    bullets: [
-      'Solar Lighting Types — All-in-one street lights, split-type street lights, garden/pathway lights, flood lights, and motion-sensor lights for security and outdoor illumination',
-      'Applications — Residential outdoors, gardens and pathways, parking lots, commercial areas, security perimeters, resorts, hotels, public parks, farms, and off-grid locations',
-      'Easy Installation, Low Maintenance, High Efficiency, Smart Features, Weather Resistant Designed with IP65/IP66, Eco-Friendly',
-    ]
-  },
-  {
-    id: 'p8',
-    productName: 'EV Charging Points - Commercial / Home',
-    image: 'ev_charging_points.jpg',
-    bullets: [
-      'Fast & Reliable Charging — Supports standard and fast-charging options',
-      'Smart Control — App monitoring, usage tracking, and scheduling features',
-      'Safe & Durable — Built with protection against overloads, surges, and overheating',
-      'Easy Installation — Suitable for homes, apartments, offices, and commercial spaces',
-      'Supports All EVs — Compatible with major electric vehicle brands and models',
-    ]
-  },
-  {
+
     id: 'p6',
     productName: 'Off-Grid Solar System',
     image: 'offgrid_solar_system.png',
@@ -96,5 +85,18 @@ export const products: ProductItem[] = [
 
     ]
   },
+  {
+    id: 'p8',
+    productName: 'EV Charging Points - Commercial / Home',
+    image: 'ev_charging_points.jpg',
+    bullets: [
+      'Fast & Reliable Charging — Supports standard and fast-charging options',
+      'Smart Control — App monitoring, usage tracking, and scheduling features',
+      'Safe & Durable — Built with protection against overloads, surges, and overheating',
+      'Easy Installation — Suitable for homes, apartments, offices, and commercial spaces',
+      'Supports All EVs — Compatible with major electric vehicle brands and models',
+    ]
+  },
+
 
 ];

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { ProductItem, ServiceItem } from '../types';
+import { ProductItem } from '../types';
 import { staggerItem } from '../utils/animationConfig';
 import ProductsCardModal from './modal/ProductsCardModal';
+import { Eye, CircleEllipsis } from 'lucide-react';
 
 interface ProductCardProps {
     product: ProductItem;
@@ -10,102 +11,110 @@ interface ProductCardProps {
 
 export const ProductCard_SM = ({ product }: ProductCardProps) => {
     const [selectedProduct, setSelectedProduct] = React.useState<ProductItem | undefined>(undefined);
+
+    const open = useCallback((p: ProductItem) => setSelectedProduct(p), []);
+    const close = useCallback(() => setSelectedProduct(undefined), []);
+
+    const scrollToSection = (href: string) => {
+        const element = document.querySelector(href);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <>
             <motion.div
                 variants={staggerItem}
-                whileHover={{
-                    y: -15,
-                    boxShadow: '0 30px 60px rgba(6, 124, 100, 0.15)',
-                    transition: { duration: 0.3 }
+                whileHover={{ y: -10, scale: 1.01 }}
+                transition={{ duration: 0.35 }}
+                className="group bg-white rounded-2xl shadow-md hover:shadow-2xl overflow-hidden transition-transform duration-300 flex flex-col h-full focus-within:ring-2 focus-within:ring-[#0B7D64]/30"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') open(product);
                 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full group"
+                aria-label={`Open ${product.productName} details`}
             >
                 {product.image && (
-                    <motion.div className="relative overflow-hidden h-56">
-                        <div
-                            className={`absolute inset-0 bg-gradient-to-br #0B7D64 opacity-45`}
-                        />
+                    <div className="relative overflow-hidden h-56 rounded-t-2xl">
                         <motion.img
                             src={`${import.meta.env.BASE_URL}product/${product.image}`}
                             alt={product.productName}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
                             loading="lazy"
-                            whileHover={{ scale: 1.15 }}
-                            transition={{ duration: 0.6 }}
+                            draggable={false}
                         />
+
+                        {/* green tint mask in front of image; increases on hover */}
                         <motion.div
-                            // className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent group-hover:from-black/60"
-                            className="absolute inset-0 bg-gradient-to-t from-[#0B7D64]/50 via-[#0B7D64]/10 to-transparent group-hover:from-[#0B7D64]/30 group-hover:via-[#0B7D64]/20"
-                            transition={{ duration: 0.3 }}
-                        ></motion.div>
-                    </motion.div>
+                            className="absolute inset-0 pointer-events-none rounded-t-2xl transition-opacity duration-300"
+                            initial={{ opacity: 0.18 }}
+                            // motion won't pick up group-hover, use CSS utility for hover transition
+                            style={{
+                                background:
+                                    'linear-gradient(180deg, rgba(11,125,100,0.18) 0%, rgba(11,125,100,0.08) 35%, rgba(11,125,100,0.04) 50%, transparent 100%)'
+                            }}
+                        />
+                        <div className="absolute inset-0 rounded-t-2xl pointer-events-none bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-60" />
+                        {/* subtle accent at bottom of image */}
+                        <div
+                            aria-hidden
+                            className="absolute left-4 bottom-4 rounded-full h-3 w-20"
+                            style={{ background: 'linear-gradient(90deg,#FFB020,#0B7D64)' }}
+                        />
+                    </div>
                 )}
 
-                <div className="p-6 flex-grow flex flex-col">
-                    <motion.h3
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5 }}
-                        viewport={{ once: true }}
-                        className="text-xl font-bold  text-[#067C64] h-[40px] mb-3"
-                    >
+                <div className="p-5 flex-grow flex flex-col">
+                    <h3 className="text-lg font-semibold text-[#0B7D64] mb-1 leading-tight line-clamp-2">
                         {product.productName}
-                    </motion.h3>
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        viewport={{ once: true }}
-                        className="text-[#6B7280] py-2 h-[50px] leading-relaxed flex-grow"
-                    >
-                        Price
-                    </motion.p>
+                    </h3>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        viewport={{ once: true }}
-                        className="mt-auto pt-0 border-t border-gray-100"
-                    >
-                        <motion.div
-                            whileHover={{ x: 10 }}
-                            transition={{ duration: 0.3 }}
-                            className="inline-flex items-center text-[#067C64] font-semibold hover:text-[#05684F] transition-colors cursor-pointer"
-                        >
+                    <p className="text-sm text-[#6B7280] mb-4 flex-grow">
+                        {product.description ? product.description : 'High quality solar product.'}
+                    </p>
+
+                    <div className="flex items-center justify-between gap-4 mt-auto">
+                        <div>
+                            <div className="text-sm text-[#6B7280]">Price Starting</div>
+                            <div className="text-xl font-bold text-[#0B7D64]">
+                                {product.price ? `Rs.${product.price}` : 'Rs.250000'}
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-1">
+
                             <button
-                                onClick={() => setSelectedProduct(product)}
-                                className="inline-flex items-center"
+                                onClick={() => {
+                                    if (product.link) {
+                                        window.open(product.link, "_blank");
+                                    } else {
+                                        scrollToSection("#contact");
+                                    }
+                                }}
+                                className=""
+                                aria-label={`Request quote for ${product.productName}`}
                             >
-
-                                Learn More
-                                <motion.svg
-                                    className="w-4 h-4 ml-2"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    animate={{ x: [0, 5, 0] }}
-                                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M9 5l7 7-7 7"
-                                    />
-                                </motion.svg>
+                                <img
+                                    src={`${import.meta.env.BASE_URL}icon/whatsapp2.gif`}
+                                    alt="WhatsApp icon"
+                                />
                             </button>
-                        </motion.div>
-                    </motion.div>
-                </div>
-            </motion.div>
-            <ProductsCardModal
-                product={selectedProduct!}
-                index={0}
-                isOpen={!!selectedProduct}
-                onClose={() => setSelectedProduct(undefined)}
-            />
+                            <button
+                                onClick={() => open(product)}
+                                className="items-center text-[#0B7D64] shadow-sm hover:scale-[1.02] transition-transform duration-200"
+                                aria-label={`View ${product.productName} details`}
+                            >
+                                {/* <Eye className="w-9 h-9 mr-0" /> */}
+                                <CircleEllipsis className="w-9 h-9 mr-0" />
+                            </button>
+                        </div>
+                    </div>
+                </div >
+            </motion.div >
+
+            <ProductsCardModal product={selectedProduct!} index={0} isOpen={!!selectedProduct} onClose={close} />
         </>
-    )
-}
+    );
+};
+
+export default ProductCard_SM;
