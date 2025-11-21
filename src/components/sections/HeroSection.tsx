@@ -69,10 +69,10 @@ const HeroSection = () => {
               </motion.button>
               <motion.button
                 {...buttonHover}
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => scrollToSection('#products')}
                 className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-50 text-[#067C64] font-semibold rounded-lg shadow-lg transition-all duration-200 group ring-1 ring-white/10"
               >
-                Get a Quote
+                Products
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </motion.div>

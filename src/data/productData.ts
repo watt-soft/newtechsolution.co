@@ -5,6 +5,7 @@ export const products: ProductItem[] = [
     id: 'p1',
     productName: 'Solar Air Conditioner',
     image: 'solar_ac.png',
+    description: 'Energy-saving cooling solutions powered by solar panels, available in DC and hybrid models.',
     bullets: [
       '  DC Solar Air Conditioner (100% Solar) — Runs directly on solar power from solar panels',
       'Hybrid Air Conditioner — Uses both solar power and grid electricity. Auto switch  Prioritizes solar; switches to grid during low sunlight or night',
@@ -15,6 +16,7 @@ export const products: ProductItem[] = [
     id: 'p2',
     productName: 'Solar Hot Water System',
     image: 'solar_hot_water.jpeg',
+    description: 'Reliable solar-powered water heating system for homes and commercial use with long lifespan.',
     bullets: [
       'Energy Savings — Uses free solar energy to reduce monthly bills',
       'Long-Lasting — Minimal maintenance; 15-20+ year lifespan',
@@ -27,6 +29,7 @@ export const products: ProductItem[] = [
     id: 'p3',
     productName: 'Solar Water Pump',
     image: 'solar_water_pump.png',
+    description: 'Efficient solar-driven water pumping solution designed for farms, gardens, and remote areas.',
     bullets: [
       'Efficient Performance — Ideal for small to medium water needs',
       'Direct Solar Use — Runs from solar panels with a dedicated controller',
@@ -39,6 +42,7 @@ export const products: ProductItem[] = [
     id: 'p4',
     productName: 'Solar Outdoor LED Lights',
     image: 'solar_outdoor_light.jpg',
+    description: 'Outdoor solar lighting solutions for streets, pathways, gardens, and security applications.',
     bullets: [
       'Solar Lighting Types — All-in-one street lights, split-type street lights, garden/pathway lights, flood lights, and motion-sensor lights for security and outdoor illumination',
       'Applications — Residential outdoors, gardens and pathways, parking lots, commercial areas, security perimeters, resorts, hotels, public parks, farms, and off-grid locations',
@@ -50,6 +54,7 @@ export const products: ProductItem[] = [
     id: 'p5',
     productName: 'On-Grid Solar System',
     image: 'ongrid_solar_system.jpg',
+    description: 'On-grid solar power system that reduces electricity bills through net metering and high efficiency.',
     bullets: [
       'Grid-Connected — Generates solar power and feeds excess energy to the utility grid while getting passive income',
       'Cost-Effective — Zero monthly electricity bill',
@@ -63,6 +68,7 @@ export const products: ProductItem[] = [
     id: 'p6',
     productName: 'Off-Grid Solar System',
     image: 'offgrid_solar_system.png',
+    description: 'Off-grid solar solution providing 24/7 power independence using solar panels and battery storage.',
     bullets: [
       'Fully Independent — Operates without grid connection using solar + battery storage',
       'Reliable Backup — 24/7 Uninterrupted stable power supply',
@@ -76,6 +82,7 @@ export const products: ProductItem[] = [
     id: 'p7',
     productName: 'Hybrid Solar System',
     image: 'hybrid_solar_system.jpg',
+    description: 'Hybrid solar system combining solar, battery, and grid power for maximum savings and backup.',
     bullets: [
       'Earn high income during peak time selling',
       'Dual Power Source — Uses solar energy, batteries, and grid power together',
@@ -89,6 +96,7 @@ export const products: ProductItem[] = [
     id: 'p8',
     productName: 'EV Charging Points - Commercial / Home',
     image: 'ev_charging_points.jpg',
+    description: 'Smart and safe EV charging solutions for homes, apartments, offices, and commercial locations.',
     bullets: [
       'Fast & Reliable Charging — Supports standard and fast-charging options',
       'Smart Control — App monitoring, usage tracking, and scheduling features',
