@@ -48,7 +48,7 @@ export const ProductCard_SM = ({ product }: ProductCardProps) => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
-                        className="text-xl font-bold text-[#0F1724] mb-3"
+                        className="text-xl font-bold  text-[#067C64] h-[40px] mb-3"
                     >
                         {product.productName}
                     </motion.h3>
@@ -57,9 +57,9 @@ export const ProductCard_SM = ({ product }: ProductCardProps) => {
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
                         viewport={{ once: true }}
-                        className="text-[#6B7280] leading-relaxed flex-grow"
+                        className="text-[#6B7280] py-2 h-[50px] leading-relaxed flex-grow"
                     >
-                        {/* {service.description} */}
+                        Price
                     </motion.p>
 
                     <motion.div
@@ -67,7 +67,7 @@ export const ProductCard_SM = ({ product }: ProductCardProps) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="mt-4 pt-4 border-t border-gray-100"
+                        className="mt-auto pt-0 border-t border-gray-100"
                     >
                         <motion.div
                             whileHover={{ x: 10 }}

@@ -35,6 +35,19 @@ export const products: ProductItem[] = [
       'Capacities — DC pumps from 0.5 HP to 3 HP',
     ]
   },
+
+  {
+    id: 'p5',
+    productName: 'On-Grid Solar System',
+    image: 'ongrid_solar_system.jpg',
+    bullets: [
+      'Grid-Connected — Generates solar power and feeds excess energy to the utility grid while getting passive income',
+      'Cost-Effective — Zero monthly electricity bill',
+      'No Batteries Required — Lower installation cost and simple maintenance',
+      'Best For — Homes, offices, shops, apartments, and commercial buildings with stable grid supply',
+
+    ]
+  },
   {
     id: 'p4',
     productName: 'Solar Outdoor LED Lights',
@@ -46,15 +59,15 @@ export const products: ProductItem[] = [
     ]
   },
   {
-    id: 'p5',
-    productName: 'On-Grid Solar System',
-    image: 'ongrid_solar_system.jpg',
+    id: 'p8',
+    productName: 'EV Charging Points - Commercial / Home',
+    image: 'ev_charging_points.jpg',
     bullets: [
-      'Grid-Connected — Generates solar power and feeds excess energy to the utility grid while getting passive income',
-      'Cost-Effective — Zero monthly electricity bill',
-      'No Batteries Required — Lower installation cost and simple maintenance',
-      'Best For — Homes, offices, shops, apartments, and commercial buildings with stable grid supply',
-
+      'Fast & Reliable Charging — Supports standard and fast-charging options',
+      'Smart Control — App monitoring, usage tracking, and scheduling features',
+      'Safe & Durable — Built with protection against overloads, surges, and overheating',
+      'Easy Installation — Suitable for homes, apartments, offices, and commercial spaces',
+      'Supports All EVs — Compatible with major electric vehicle brands and models',
     ]
   },
   {
@@ -83,16 +96,5 @@ export const products: ProductItem[] = [
 
     ]
   },
-  {
-    id: 'p8',
-    productName: 'EV Charging Points - Commercial / Home',
-    image: 'ev_charging_points.jpg',
-    bullets: [
-      'Fast & Reliable Charging — Supports standard and fast-charging options',
-      'Smart Control — App monitoring, usage tracking, and scheduling features',
-      'Safe & Durable — Built with protection against overloads, surges, and overheating',
-      'Easy Installation — Suitable for homes, apartments, offices, and commercial spaces',
-      'Supports All EVs — Compatible with major electric vehicle brands and models',
-    ]
-  }
+
 ];
