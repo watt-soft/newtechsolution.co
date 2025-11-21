@@ -30,7 +30,7 @@ const ServiceCard_LG = ({ service, index }: ServiceCardProps) => {
             >
                 <motion.div className="lg:w-[30%] relative overflow-hidden group">
                     <motion.img
-                        src={service.image}
+                        src={`${import.meta.env.BASE_URL}service/${service.image}`}
                         alt={service.title}
                         className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
@@ -55,7 +55,7 @@ const ServiceCard_LG = ({ service, index }: ServiceCardProps) => {
                     </motion.h3>
 
                     <motion.ul
-                        className="space-y-4 h-[200px]"
+                        className="space-y-4 h-[120px]"
                         initial="initial"
                         whileInView="whileInView"
                         variants={{
