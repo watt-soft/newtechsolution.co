@@ -32,7 +32,7 @@ const AboutSection = () => {
           ></motion.div>
         </motion.div>
 
-        <div className="grid  grid-cols-1 md:grid-cols-5 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center mb-16">
           {/* <motion.div
             initial={slideInLeft.initial}
             whileInView={slideInLeft.whileInView}
