@@ -32,8 +32,8 @@ const AboutSection = () => {
           ></motion.div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <motion.div
+        <div className="grid  grid-cols-1 md:grid-cols-5 gap-12 items-center mb-16">
+          {/* <motion.div
             initial={slideInLeft.initial}
             whileInView={slideInLeft.whileInView}
             transition={slideInLeft.transition}
@@ -47,23 +47,37 @@ const AboutSection = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
             />
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
-            className="space-y-6"
+            className="space-y-6 col-span-5 md:col-span-3"
             initial={slideInRight.initial}
             whileInView={slideInRight.whileInView}
             transition={slideInRight.transition}
             viewport={slideInRight.viewport}
           >
             {[
-              "New Tech Solution is a prominent provider of solar energy solutions with over 23 years of experience in the industry. The company was initially established in 2003 under the name Asian Computer Technologies, focusing on computer accessories, and electronic items.",
-              "In the following years, the company rebranded itself as CSH Technology, broadening its services to include computer networking, software development, electronic and electrical products, and solar energy systems about four years ago. Recognizing the growing potential in the solar industry, CSH Technology transitioned to specialize in solar energy projects, and subsequently, the company rebranded as New Tech Solution.",
-              "Today, New Tech Solution focuses exclusively on delivering high-quality solar energy systems to both residential and commercial sectors, providing innovative and sustainable solutions for a greener future."
+              <>
+                <strong> New Tech Solution Mawanella </strong> is a proud member of a diversified and innovative group of companies that includes <b>nkCeylon Trading, CSH Technology, WattSoft, and Eco Power Plus. </b>  Together, we represent a strong, future-focused network committed to delivering excellence across multiple industries
+              </>,
+
+              <>
+                Operating in the renewable energy sector for the past <b>five years</b> , New Tech Solution has rapidly grown into a trusted provider of high-quality solar and energy solutions across Sri Lanka. Our expertise spans solar system designing, installation, off-grid engineering, EV charging solutions, and advanced energy optimization. With a strong reputation for reliability and technical precision, we continue to empower homes, businesses, and industries with sustainable and cost-effective clean energy solutions.
+              </>,
+              <>
+                Within our group, <b> CSH Technology </b> stands as a cornerstone, proudly operating for <b> over 23 years </b> and serving as a registered <b> BOI supplier </b>. This long-standing experience, combined with the strengths of our other group companies—WattSoft in software and digital innovation, nkCeylon Trading in food production and export, and Eco Power Plus in ground-mounted solar system developing—forms a powerful ecosystem of expertise.
+              </>,
+              <>
+                At New Tech Solution Mawanella, our vision is simple: <br />
+                <b>to create smarter, greener, and more resilient energy systems for a sustainable Sri Lanka.</b>
+              </>,
+              <>
+                We are committed to delivering cutting-edge technology, professional service, and long-term value to all our clients, while proudly contributing to a cleaner and more energy-secure future.
+              </>
             ].map((text, idx) => (
               <motion.p
                 key={idx}
-                className="text-[#0F1724] leading-relaxed"
+                className="text-[#0F1724] text-justify leading-relaxed"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
@@ -72,9 +86,45 @@ const AboutSection = () => {
                 {text}
               </motion.p>
             ))}
-
+          </motion.div>
+          <div className='mx-0 p-0 col-span-5 md:col-span-2'>
             <motion.div
-              className="bg-gradient-to-r from-[#067C64] to-[#05684F] text-white p-6 rounded-xl"
+              className="grid md:grid-cols-1 gap-10 mt-0"
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+              variants={staggerContainer}
+            >
+              {[
+                // { Icon: History, title: 'Our Heritage', text: '23+ years of excellence from IT to renewable energy solutions' },
+                { Icon: Target, title: 'Our Mission', text: 'Deliver sustainable solar solutions for a greener future' },
+                { Icon: TrendingUp, title: 'Our Growth', text: '400+ successful projects and 380+ satisfied customers' }
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="text-center p-8 bg-[#F7F7F7] rounded-2xl"
+                  variants={staggerItem}
+                  whileHover={{
+                    y: -10,
+                    boxShadow: '0 20px 40px rgba(6, 124, 100, 0.1)',
+                    backgroundColor: '#ffffff'
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.div
+                    className="bg-gradient-to-br from-[#067C64] to-[#05684F] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <item.Icon className="w-8 h-8 text-white" />
+                  </motion.div>
+                  <h3 className="text-xl font-bold text-[#0F1724] mb-2">{item.title}</h3>
+                  <p className="text-[#6B7280]">{item.text}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-[#067C64] to-[#05684F] text-white p-6 rounded-xl mt-10"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -87,46 +137,12 @@ const AboutSection = () => {
                 </motion.div>
                 <h3 className="text-xl font-bold">Our Achievements</h3>
               </div>
-              <p className="text-lg">Successfully installed 55 megawatts of solar power.</p>
+              <p className="text-lg">Successfully installed 1.5+ megawatts of solar power.</p>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          className="grid md:grid-cols-3 gap-8 mt-16"
-          initial="initial"
-          whileInView="whileInView"
-          viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-          variants={staggerContainer}
-        >
-          {[
-            { Icon: History, title: 'Our Heritage', text: '23+ years of excellence from IT to renewable energy solutions' },
-            { Icon: Target, title: 'Our Mission', text: 'Deliver sustainable solar solutions for a greener future' },
-            { Icon: TrendingUp, title: 'Our Growth', text: '400+ successful projects and 380+ satisfied customers' }
-          ].map((item, idx) => (
-            <motion.div
-              key={idx}
-              className="text-center p-8 bg-[#F7F7F7] rounded-2xl"
-              variants={staggerItem}
-              whileHover={{
-                y: -10,
-                boxShadow: '0 20px 40px rgba(6, 124, 100, 0.1)',
-                backgroundColor: '#ffffff'
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.div
-                className="bg-gradient-to-br from-[#067C64] to-[#05684F] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.6 }}
-              >
-                <item.Icon className="w-8 h-8 text-white" />
-              </motion.div>
-              <h3 className="text-xl font-bold text-[#0F1724] mb-2">{item.title}</h3>
-              <p className="text-[#6B7280]">{item.text}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+
 
         <motion.div
           className="mt-16 text-center"
