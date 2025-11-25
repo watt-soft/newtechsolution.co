@@ -7,10 +7,10 @@ export const products: ProductItem[] = [
     image: 'solar_ac.png',
     description: 'Energy-saving cooling solutions powered by solar panels, available in DC and hybrid models.',
     bullets: [
-      '  DC Solar Air Conditioner (100% Solar) — Runs directly on solar power from solar panels',
+      'DC Solar Air Conditioner (100% Solar) — Runs directly on solar power from solar panels',
       'Hybrid Air Conditioner — Uses both solar power and grid electricity. Auto switch  Prioritizes solar; switches to grid during low sunlight or night',
       'Energy-efficient — Ideal for offices, schools, show rooms, hotels and educational institute',
-    ]
+    ],
   },
   {
     id: 'p2',
@@ -23,7 +23,8 @@ export const products: ProductItem[] = [
       'Wide Use — Suitable for homes, hotels, hospitals, factories, and more',
       'Eco-Friendly — Lowers carbon emissions and fossil-fuel dependence',
       'Capacities — 100-300L for homes; 500-5000L+ for commercial use',
-    ]
+    ],
+    price: 65000,
   },
   {
     id: 'p3',
@@ -61,7 +62,8 @@ export const products: ProductItem[] = [
       'No Batteries Required — Lower installation cost and simple maintenance',
       'Best For — Homes, offices, shops, apartments, and commercial buildings with stable grid supply',
 
-    ]
+    ],
+    price: 650000,
   },
   {
 

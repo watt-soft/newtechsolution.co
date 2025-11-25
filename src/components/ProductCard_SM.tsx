@@ -4,6 +4,7 @@ import { ProductItem } from '../types';
 import { staggerItem } from '../utils/animationConfig';
 import ProductsCardModal from './modal/ProductsCardModal';
 import { Eye, CircleEllipsis } from 'lucide-react';
+import { formatCurrency } from '../utils';
 
 interface ProductCardProps {
     product: ProductItem;
@@ -77,7 +78,7 @@ export const ProductCard_SM = ({ product }: ProductCardProps) => {
                         <div>
                             <div className="text-sm text-[#6B7280]">Price Starting</div>
                             <div className="text-xl font-bold text-[#0B7D64]">
-                                {product.price ? `Rs.${product.price}` : 'Rs.250000'}
+                                {product.price ? `${formatCurrency(product.price)}` : 'Pending'}
                             </div>
                         </div>
 
