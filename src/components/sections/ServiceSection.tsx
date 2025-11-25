@@ -41,7 +41,7 @@ export const ServiceSection = () => {
                             transition={{ duration: 0.6, delay: 0.3 }}
                             viewport={{ once: true }}
                         >
-                            Comprehensive solar energy services from installation to maintenance
+                            Comprehensive solar energy services from system designing to after care service
                         </motion.p>
                     </motion.div>
                     <div className="space-y-8">
