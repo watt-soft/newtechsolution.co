@@ -1,6 +1,8 @@
 import { Sun, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem } from '../utils/animationConfig';
+import { Logo } from './atoms/Logo';
+import { services } from '../data/serviceData';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,25 +24,26 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <motion.div variants={staggerItem}>
+            <Logo size='xl' className="drop-shadow-sm" />
             <motion.div
               className="flex items-center space-x-3 mb-4"
               whileHover={{ x: 5 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div
+              {/* <motion.div
                 className="bg-[#067C64] p-2 rounded-lg"
                 whileHover={{ rotate: 360, scale: 1.1 }}
                 transition={{ duration: 0.6 }}
               >
                 <Sun className="w-6 h-6 text-white" />
-              </motion.div>
+              </motion.div> */}
               <div>
-                <h3 className="text-lg font-bold">NEW TECH SOLUTION</h3>
+                <h3 className="text-lg font-bold">NEW TECH SOLUTION MAWANALLA</h3>
                 <p className="text-xs text-gray-400">(PVT) LTD</p>
               </div>
             </motion.div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Leading solar energy solutions provider with 23+ years of experience in delivering
+              Leading solar energy solutions provider with 5+ years of experience in delivering
               sustainable power systems.
             </p>
           </motion.div>
@@ -68,9 +71,9 @@ const Footer = () => {
           <motion.div variants={staggerItem}>
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              {['Solar Installing', 'Solar Item Supply', 'Maintenance & Troubleshooting', 'EV Charging Solutions'].map((service) => (
-                <motion.li key={service} whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
-                  {service}
+              {services.map((service) => (
+                <motion.li key={service.id} whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
+                  {service.title}
                 </motion.li>
               ))}
             </ul>
@@ -79,24 +82,32 @@ const Footer = () => {
           <motion.div variants={staggerItem}>
             <h4 className="font-bold mb-4">Connect With Us</h4>
             <motion.div className="flex space-x-4 mb-4" initial="initial" whileInView="whileInView" variants={staggerContainer}>
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
+              {[{
+                icon: Facebook,
+                url: "https://www.facebook.com/share/1A5s1KUxqB/"
+              }, {
+                icon: Linkedin,
+                url: "https://www.linkedin.com/company/nts-maw/"
+              },].map((Icon, idx) => (
                 <motion.a
                   key={idx}
-                  href="#"
+                  href={Icon.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-[#067C64] p-2 rounded-lg transition-colors"
                   variants={staggerItem}
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <Icon className="w-5 h-5" />
+                  <Icon.icon className="w-5 h-5" />
                 </motion.a>
               ))}
             </motion.div>
             <p className="text-gray-400 text-sm">
-              <span className="font-semibold">Email:</span> info@newtechsolution.lk
+              <span className="font-semibold">Email:</span> info@newtechsolution.co
             </p>
             <p className="text-gray-400 text-sm">
-              <span className="font-semibold">Phone:</span> +94 77 123 4567
+              <span className="font-semibold">Phone:</span> 0767 796 422
             </p>
           </motion.div>
         </motion.div>
@@ -109,8 +120,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p>
-            &copy; {currentYear} New Tech Solution (PVT) LTD. All rights reserved. | Powered by
-            Clean Energy
+            &copy; {currentYear} Wattsoft (PVT) LTD. All rights reserved.
           </p>
         </motion.div>
       </div>
