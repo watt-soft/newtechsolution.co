@@ -158,31 +158,128 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Our Partners
+            Group Of Company
           </motion.h3>
+
           <motion.div
-            className="flex flex-wrap justify-center items-center gap-12"
+            className="flex flex-wrap justify-center items-center gap-6"
             initial="initial"
             whileInView="whileInView"
             variants={staggerContainer}
             viewport={{ once: true, margin: '0px 0px -100px 0px' }}
           >
-            {['Renewa', 'CSH Technology'].map((partner, idx) => (
-              <motion.a
-                key={idx}
-                href="#"
-                className="bg-[#F7F7F7] px-8 py-4 rounded-xl hover:shadow-lg transition-shadow"
-                variants={staggerItem}
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: '0 15px 30px rgba(6, 124, 100, 0.15)',
-                  backgroundColor: '#ffffff'
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <span className="text-2xl font-bold text-[#067C64]">{partner}</span>
-              </motion.a>
-            ))}
+            {
+              [
+                // {
+                //   name: 'Renewa',
+                //   logo: 'renewa-logo-1.jpg'
+                // },
+                {
+                  name: 'nkCeylon',
+                  logo: 'nk-ceylone-logo.png'
+                },
+                {
+                  name: 'CSH Technology',
+                  logo: 'csh-logo.png'
+                },
+                {
+                  name: 'WattSoft',
+                  logo: 'wattsoft2.png'
+                },
+                {
+                  name: 'New Tech Solution',
+                  logo: 'newtech-logo.png'
+                },
+                {
+                  name: 'Eco Power Plus',
+                  logo: 'eco-plus-logo.png'
+                },
+
+              ].map((company, idx) => (
+                <motion.a
+                  key={idx}
+                  href="#"
+                  className="bg-[#F7F7F7] px-3 py-2 rounded-xl hover:shadow-lg transition-shadow"
+                  variants={staggerItem}
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: '0 15px 30px rgba(6, 124, 100, 0.15)',
+                    backgroundColor: '#ffffff'
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={`${import.meta.env.BASE_URL}logo/${company.logo}`}
+                    alt={company.name}
+                    className={`h-[100px] w-auto object-cover scale-125 transition-all duration-200`}
+                    style={{
+                      objectPosition: 'center',
+                      transform: 'scale(1.0)', zoom: '1'
+                    }}
+                  />
+                  {/* <span className="text-2xl font-bold text-[#067C64]">{company.name}</span> */}
+                </motion.a>
+              ))}
+          </motion.div>
+        </motion.div>
+
+
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+        >
+          <motion.h3
+            className="text-2xl font-bold text-[#0F1724] mb-8"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Our Partners
+          </motion.h3>
+
+          <motion.div
+            className="flex flex-wrap justify-center items-center gap-6"
+            initial="initial"
+            whileInView="whileInView"
+            variants={staggerContainer}
+            viewport={{ once: true, margin: '0px 0px -100px 0px' }}
+          >
+            {
+              [
+                {
+                  name: 'Renewa',
+                  logo: 'renewa-logo-2.jpg'
+                },
+
+              ].map((partner, idx) => (
+                <motion.a
+                  key={idx}
+                  href="#"
+                  className="bg-[#F7F7F7] px-3 py-2 rounded-xl hover:shadow-lg transition-shadow"
+                  variants={staggerItem}
+                  whileHover={{
+                    scale: 1.1,
+                    boxShadow: '0 15px 30px rgba(6, 124, 100, 0.15)',
+                    backgroundColor: '#ffffff'
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={`${import.meta.env.BASE_URL}logo/${partner.logo}`}
+                    alt={partner.name}
+                    className={`h-[150px] w-auto object-cover scale-125 transition-all duration-200`}
+                    style={{
+                      objectPosition: 'center',
+                      transform: 'scale(1.0)', zoom: '1'
+                    }}
+                  />
+                  {/* <span className="text-2xl font-bold text-[#067C64]">{company.name}</span> */}
+                </motion.a>
+              ))}
           </motion.div>
         </motion.div>
       </div>
