@@ -98,7 +98,7 @@ const AboutSection = () => {
               {[
                 // { Icon: History, title: 'Our Heritage', text: '23+ years of excellence from IT to renewable energy solutions' },
                 { Icon: Target, title: 'Our Mission', text: 'Deliver sustainable solar solutions for a greener future' },
-                { Icon: TrendingUp, title: 'Our Growth', text: '400+ successful projects and 380+ satisfied customers' }
+                { Icon: TrendingUp, title: 'Our Growth', text: '100+ successful projects' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
