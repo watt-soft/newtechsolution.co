@@ -22,7 +22,7 @@ function App() {
         {/* <StatCards /> */}
         <ProductSection />
         <ServiceSection />
-        <PortfolioSection />
+        {/* <PortfolioSection /> */}
         <AboutSection />
         <ContactSection />
         <Footer />

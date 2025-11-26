@@ -158,7 +158,7 @@ const AboutSection = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Group Of Company
+            Group Of Companies
           </motion.h3>
 
           <motion.div

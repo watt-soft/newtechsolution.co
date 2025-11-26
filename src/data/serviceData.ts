@@ -3,7 +3,7 @@ import { ServiceItem } from '../types';
 export const services: ServiceItem[] = [
   {
     id: 's1',
-    title: 'HIgh efficient solar system designing',
+    title: 'High efficient solar system designing',
     description: 'High-efficiency solar system design services using advanced engineering and energy analysis to maximize output, reduce costs, and deliver reliable performance for homes and businesses.',
     image: 'solar-designing.jpeg'
   },
