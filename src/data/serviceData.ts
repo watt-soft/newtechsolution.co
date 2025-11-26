@@ -5,13 +5,13 @@ export const services: ServiceItem[] = [
     id: 's1',
     title: 'High efficient solar system designing',
     description: 'High-efficiency solar system design services using advanced engineering and energy analysis to maximize output, reduce costs, and deliver reliable performance for homes and businesses.',
-    image: 'solar-designing.jpeg'
+    image: 'solar-designing.webp'
   },
   {
     id: 's2',
     title: 'Solar installing',
     description: 'Professional solar panel installation services for residential and commercial properties. Our certified technicians ensure optimal placement and configuration for maximum energy production.',
-    image: 'solar-installing.jpeg'
+    image: 'solar-installing.webp'
   },
   {
     id: 's3',

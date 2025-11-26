@@ -57,11 +57,11 @@ export const ProductCard_SM = ({ product }: ProductCardProps) => {
                         />
                         <div className="absolute inset-0 rounded-t-2xl pointer-events-none bg-gradient-to-t from-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-60" />
                         {/* subtle accent at bottom of image */}
-                        <div
+                        {/* <div
                             aria-hidden
                             className="absolute left-4 bottom-4 rounded-full h-3 w-20"
                             style={{ background: 'linear-gradient(90deg,#FFB020,#0B7D64)' }}
-                        />
+                        /> */}
                     </div>
                 )}
 
