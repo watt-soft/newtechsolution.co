@@ -85,7 +85,7 @@ const HeroSection = () => {
             >
               {[
                 { value: '1.5MW+', label: 'Installed Capacity' },
-                { value: '3GW+', label: 'Average Daily Generation' },
+                { value: '3MWh+', label: 'Average Daily Generation' },
                 { value: '100+', label: 'Projects' },
                 { value: '5+', label: 'Years' }
               ].map((stat, index) => (

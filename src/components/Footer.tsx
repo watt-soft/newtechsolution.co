@@ -107,7 +107,7 @@ const Footer = () => {
               <span className="font-semibold">Email:</span> info@newtechsolution.co
             </p>
             <p className="text-gray-400 text-sm">
-              <span className="font-semibold">Phone:</span> 0767 796 422
+              <span className="font-semibold">Phone:</span> 0767 796 422 / 0357 300 345
             </p>
           </motion.div>
         </motion.div>
