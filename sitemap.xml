@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://newtechsolution.co/</loc>
+        <priority>1.0</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://newtechsolution.co/services</loc>
+    </url>
+    <url>
+        <loc>https://newtechsolution.co/projects</loc>
+    </url>
+    <url>
+        <loc>https://newtechsolution.co/contact</loc>
+    </url>
+</urlset>
