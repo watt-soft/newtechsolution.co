@@ -5,19 +5,19 @@ export const services: ServiceItem[] = [
     id: 's1',
     title: 'High efficient solar system designing',
     description: 'High-efficiency solar system design services using advanced engineering and energy analysis to maximize output, reduce costs, and deliver reliable performance for homes and businesses.',
-    image: 'solar-designing.webp'
+    image: 'solar-designing.jpeg'
   },
   {
     id: 's2',
     title: 'Solar installing',
     description: 'Professional solar panel installation services for residential and commercial properties. Our certified technicians ensure optimal placement and configuration for maximum energy production.',
-    image: 'solar-installing.webp'
+    image: 'solar-installing.jpeg'
   },
   {
     id: 's3',
     title: 'Solar item supply',
     description: 'Comprehensive supply of premium solar equipment including panels, inverters, batteries, mounting systems, and all necessary components from trusted international brands.',
-    image: 'solar-items.jpg'
+    image: 'solar-items.jpeg'
   },
   {
     id: 's4',
@@ -29,6 +29,6 @@ export const services: ServiceItem[] = [
     id: 's5',
     title: 'EV Fast charging & Home chargers',
     description: 'Installation and supply of electric vehicle charging solutions including fast charging stations for commercial use and convenient home chargers for residential properties.',
-    image: 'ev-charging.jpg'
+    image: 'ev-charging.jpeg'
   }
 ];
