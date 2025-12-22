@@ -84,7 +84,7 @@ const Footer = () => {
             <motion.div className="flex space-x-4 mb-4" initial="initial" whileInView="whileInView" variants={staggerContainer}>
               {[{
                 icon: Facebook,
-                url: "https://www.facebook.com/share/1A5s1KUxqB/"
+                url: "https://web.facebook.com/newtechsolutionmawanella"
               }, {
                 icon: Linkedin,
                 url: "https://www.linkedin.com/company/nts-maw/"
