@@ -3,7 +3,7 @@ import { Zap } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 
 interface LogoProps {
-    size?: 'sm' | 'md' | 'lg';
+    size?: 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
     showText?: boolean;
     className?: string;
     navbar?: boolean;
@@ -18,7 +18,9 @@ export const Logo: React.FC<LogoProps> = ({
     const sizes = {
         sm: { icon: 20, text: 'text-lg', navHeight: 'h-[24px] md:h-[28px]' },
         md: { icon: 30, text: 'text-xl', navHeight: 'h-[28px] md:h-[32px]' },
-        lg: { icon: 35, text: 'text-2xl', navHeight: 'h-[30px] md:h-[38px]' }
+        lg: { icon: 35, text: 'text-2xl', navHeight: 'h-[30px] md:h-[38px]' },
+        xl: { icon: 80, text: 'text-2xl', navHeight: 'h-[30px] md:h-[38px]' },
+        xxl: { icon: 180, text: 'text-2xl', navHeight: 'h-[30px] md:h-[38px]' }
     };
 
     // Responsive size for mobile in navbar

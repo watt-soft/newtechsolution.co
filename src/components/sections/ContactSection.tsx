@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../utils/animationConfig';
+import { fadeInUp, slideInLeft, slideInRight, staggerContainer, staggerItem } from '../../utils/animationConfig';
 
-const Contact = () => {
+const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -63,7 +63,7 @@ const Contact = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-10">
           <motion.div
             initial={slideInLeft.initial}
             whileInView={slideInLeft.whileInView}
@@ -80,17 +80,19 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-[#0F1724] mb-6">Get in Touch</h3>
 
               <motion.div
-                className="space-y-6"
+                className="grid md:grid-cols-2 gap-5"
                 initial="initial"
                 whileInView="whileInView"
                 variants={staggerContainer}
                 viewport={{ once: true }}
               >
                 {[
-                  { Icon: Phone, title: 'Phone', items: ['+94 77 123 4567', '+94 11 234 5678'] },
-                  { Icon: Mail, title: 'Email', items: ['info@newtechsolution.lk', 'sales@newtechsolution.lk'] },
-                  { Icon: MapPin, title: 'Address', items: ['123 Main Street,', 'Colombo 00700,', 'Sri Lanka'] },
-                  { Icon: Clock, title: 'Business Hours', items: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 1:00 PM', 'Sunday: Closed'] }
+                  { Icon: Phone, title: 'Phone', items: ['0357 300 345', '0767 796 422'] },
+                  { Icon: Mail, title: 'Email', items: ['info@newtechsolution.co', 'sales@newtechsolution.co'] },
+                  { Icon: MapPin, title: 'Address', items: ['470A, Meepitiya', 'Kegalle, Sri Lanka'] },
+                  {
+                    Icon: Clock, title: 'Business Hours', items: ['Mon - Fri : 9:00 - 18:00', 'Sat : 9:00 - 17:00']
+                  }
                 ].map((contact, idx) => (
                   <motion.div
                     key={idx}
@@ -113,7 +115,8 @@ const Contact = () => {
                       ))}
                     </div>
                   </motion.div>
-                ))}
+                ))
+                }
               </motion.div>
             </motion.div>
 
@@ -124,8 +127,9 @@ const Contact = () => {
                 transition: { duration: 0.3 }
               }}
             >
+              {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.4714961041507!2d80.35513966668857!3d7.25381533923149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae31300108c31d5%3A0x180b683a2600527a!2sNEW%20TECH%20SOLUTION%20(PVT)%20LTD!5e0!3m2!1sen!2slk!4v1764069201170!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.798467128709!2d79.86131287475964!3d6.914682593089648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259698b8b3d89%3A0x7d7c5f6f4f4c5f5!2sColombo%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1647856789123!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.4714961041507!2d80.35513966668857!3d7.25381533923149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae31300108c31d5%3A0x180b683a2600527a!2sNEW%20TECH%20SOLUTION%20(PVT)%20LTD!5e0!3m2!1sen!2slk!4v1764069201170!5m2!1sen!2slk"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -218,4 +222,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;

@@ -2,6 +2,9 @@ export interface ProductItem {
   id: string;
   productName: string;
   image: string;
+  price?: number;
+  link?: string;
+  description?: string
   bullets: string[];
 }
 
