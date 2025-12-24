@@ -25,13 +25,12 @@ const ProductsCard = ({ product, index }: ProductsCardProps) => {
       className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
     >
       <div
-        className={`flex flex-col ${
-          isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
-        } items-stretch`}
+        className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+          } items-stretch`}
       >
         <motion.div className="lg:w-[30%] relative overflow-hidden group">
           <motion.img
-            src={product.image}
+            src={`${import.meta.env.BASE_URL}product/${product.image}`}
             alt={product.productName}
             className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"

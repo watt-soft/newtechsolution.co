@@ -135,8 +135,7 @@ const Hero = () => {
             transition={{ ...fadeInUp.transition, delay: 0.2 }}
             className="text-lg sm:text-xl text-white/85 mb-8 leading-relaxed max-w-2xl"
           >
-            Scalable solar systems, smart monitoring and energy optimization for
-            homes and businesses — engineered with modern tech and a sustainable vision.
+            Scalable On-grid, Hybrid, Off-grid solar systems, smart monitoring and energy optimization for homes, businesses and industries - engineered with modern tech and a sustainable vision.
           </motion.p>
 
           <motion.div
@@ -167,12 +166,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6"
+            className="mt-12 grid grid-cols-1 sm:grid-cols-4 gap-6"
           >
             {[
-              { value: '55MW', label: 'Installed Capacity' },
-              { value: '400+', label: 'Projects' },
-              { value: '23+', label: 'Years' }
+              { value: '1.5MW+', label: 'Installed Capacity' },
+              { value: '3GW+', label: 'Average Daily Generation' },
+              { value: '100+', label: 'Projects' },
+              { value: '5+', label: 'Years' }
             ].map((stat, index) => (
               <motion.div
                 key={index}
